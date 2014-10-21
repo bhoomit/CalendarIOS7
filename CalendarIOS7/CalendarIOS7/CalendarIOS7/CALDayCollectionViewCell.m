@@ -41,7 +41,7 @@
 		
 		_dayLabel = [[UILabel alloc] initWithFrame:self.contentView.bounds];
 		_dayLabel.textAlignment = NSTextAlignmentCenter;
-		[_dayLabel setFont:[UIFont fontWithName:@"Avenir Next Demi Bold" size:16.0f]];
+		[_dayLabel setFont:[UIFont fontWithName:@"Avenir Next Demi Bold" size:13.0f]];
 		
 		_dayLabel.backgroundColor = [UIColor clearColor];
 		[self addSubview:_dayLabel];
@@ -67,7 +67,7 @@
 	if (style == CALDayCollectionViewCellDayUIStyleIOS7) {
 		_separatorLayer = [[CALayer alloc] init];
 		[_separatorLayer setBackgroundColor:[UIColor lightGrayColor].CGColor];
-		[_separatorLayer setFrame:CGRectMake(-2.0f, 0.0f, 46.0f, 1.0f)];
+		[_separatorLayer setFrame:CGRectMake(-2.0f, self.layer.frame.size.height, 40.0f, 1.0f)];
 		[self.layer addSublayer:_separatorLayer];
 		self.contentViewColor = [UIColor clearColor];
 		self.clipsToBounds = NO;
@@ -113,8 +113,7 @@
 	[self removeTodayLayer];
 	[self setUserInteractionEnabled:YES];
 	self.dayLabel.textColor = [UIColor blackColor];
-	
-	switch (type) {
+		switch (type) {
 		case CALDayCollectionViewCellDayTypeEmpty:
 			self.dayLabel.text = @"";
 			self.dayLabel.textColor = [UIColor lightGrayColor];
@@ -126,7 +125,7 @@
 		case CALDayCollectionViewCellDayTypeToday:
 			self.dayLabel.textColor = [UIColor whiteColor];
 			self.todayLayer = [[CALayer alloc] init];
-			[self.todayLayer setFrame:CGRectMake(6.0f, 6.0f, 32.0f, 32.0f)];
+			[self.todayLayer setFrame:CGRectMake(2.0f, 2.0f, 26.0f, 26.0f)];
 			[self.todayLayer setBackgroundColor:[UIColor colorWithRed:(25/255.0) green:(210/255.0) blue:(246/255.0) alpha:1].CGColor];
 //			[self.todayLayer setCornerRadius:16.0f];
 			[self.contentView.layer addSublayer:self.todayLayer];

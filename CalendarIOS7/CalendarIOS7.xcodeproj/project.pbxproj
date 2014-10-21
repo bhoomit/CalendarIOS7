@@ -36,7 +36,6 @@
 		C29D1AD818DC159A0011C2E7 /* CALQuartHour.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D1AD718DC159A0011C2E7 /* CALQuartHour.m */; };
 		C29D1ADF18DE1C7C0011C2E7 /* CALCollectionViewFlowLayoutWithStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D1ADE18DE1C7C0011C2E7 /* CALCollectionViewFlowLayoutWithStickyHeader.m */; };
 		C2C6CAA21956111C00385FF5 /* CALAgendaLinearMonthCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C6CAA11956111C00385FF5 /* CALAgendaLinearMonthCollectionViewLayout.m */; };
-		C2D2535118EFE85C00C8C53C /* JMOEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D2535018EFE85C00C8C53C /* JMOEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +100,6 @@
 		C29D1ADE18DE1C7C0011C2E7 /* CALCollectionViewFlowLayoutWithStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALCollectionViewFlowLayoutWithStickyHeader.m; sourceTree = "<group>"; };
 		C2C6CAA01956111C00385FF5 /* CALAgendaLinearMonthCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALAgendaLinearMonthCollectionViewLayout.h; sourceTree = "<group>"; };
 		C2C6CAA11956111C00385FF5 /* CALAgendaLinearMonthCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALAgendaLinearMonthCollectionViewLayout.m; sourceTree = "<group>"; };
-		C2D2534F18EFE85C00C8C53C /* JMOEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMOEvent.h; sourceTree = "<group>"; };
-		C2D2535018EFE85C00C8C53C /* JMOEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMOEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +165,6 @@
 				C296445E18CC4EDF00D45987 /* Main.storyboard */,
 				C296446118CC4EDF00D45987 /* CALViewController.h */,
 				C296446218CC4EDF00D45987 /* CALViewController.m */,
-				C2D2534F18EFE85C00C8C53C /* JMOEvent.h */,
-				C2D2535018EFE85C00C8C53C /* JMOEvent.m */,
 				C296446418CC4EDF00D45987 /* Images.xcassets */,
 				C296445318CC4EDF00D45987 /* Supporting Files */,
 			);
@@ -385,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C296448F18CC4F7B00D45987 /* CALAgendaMonthCollectionViewLayout.m in Sources */,
-				C2D2535118EFE85C00C8C53C /* JMOEvent.m in Sources */,
 				C29644AA18CCF14B00D45987 /* CALDayHeaderView.m in Sources */,
 				C296449818CC50C200D45987 /* CALAgendaCollectionView.m in Sources */,
 				C296449018CC4F7B00D45987 /* CALDayCollectionViewCell.m in Sources */,

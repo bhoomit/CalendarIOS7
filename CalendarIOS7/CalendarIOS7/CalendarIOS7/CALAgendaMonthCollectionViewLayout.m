@@ -130,38 +130,21 @@ static NSString * const CALAgendaMonthCollectionViewLayoutHeader = @"CALAgendaMo
 
 - (CGSize)collectionViewContentSize
 {
-//    if (self.scrollDirection == UICollectionViewScrollDirectionVertical || self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
-//        //compute the worst case
-//        NSInteger numOfSections = [self.collectionView.dataSource numberOfSectionsInCollectionView:self.collectionView];
-//        NSIndexPath *lastHeaderIndexPath = [NSIndexPath indexPathForRow:0 inSection:numOfSections-1];
-//        UICollectionViewLayoutAttributes *lastLayoutAttributes = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader atIndexPath:lastHeaderIndexPath];
-//        CGSize contentSize = CGSizeMake(CGRectGetMaxX(lastLayoutAttributes.frame),CGRectGetMaxY(lastLayoutAttributes.frame) + 6*self.itemSize.height);
-//        return contentSize;
-//    }
-//    else {
-//        //compute the worst case
-//        NSInteger numOfSections = [self.collectionView.dataSource numberOfSectionsInCollectionView:self.collectionView];
-//        CGSize contentSize = CGSizeMake(7*self.headerReferenceSize.width*numOfSections, self.headerReferenceSize.height + 6*self.itemSize.height + 7*self.minimumLineSpacing);
-//        //JMOLog(@"COntent size -> %@", NSStringFromCGSize(contentSize));
-//        return contentSize;
-//    }
-	NSInteger numOfSections = [self.collectionView.dataSource numberOfSectionsInCollectionView:self.collectionView];
-	NSIndexPath *lastHeaderIndexPath = [NSIndexPath indexPathForRow:0 inSection:numOfSections-1];
-	UICollectionViewLayoutAttributes *lastLayoutAttributes = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader atIndexPath:lastHeaderIndexPath];
-	if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
-		//compute the worst case
-		CGSize contentSize = CGSizeMake(CGRectGetMaxX(lastLayoutAttributes.frame),CGRectGetMaxY(lastLayoutAttributes.frame) + 6*self.itemSize.height);
-		NSLog(@"COntent size -> %@", NSStringFromCGSize(contentSize));
-		return contentSize;
-	}
-	else {
-		//compute the worst case
-		CGSize contentSize = CGSizeMake(CGRectGetMaxX(lastLayoutAttributes.frame),CGRectGetMaxY(lastLayoutAttributes.frame) + 6*self.itemSize.height);
-		//        CGSize contentSize = CGSizeMake(7*self.headerReferenceSize.width*numOfSections, self.headerReferenceSize.height + 6*self.itemSize.height + 7*self.minimumLineSpacing);
-		//JMOLog(@"COntent size -> %@", NSStringFromCGSize(contentSize));
-		return contentSize;
-	}
-
+    if (self.scrollDirection == UICollectionViewScrollDirectionVertical || self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
+        //compute the worst case
+        NSInteger numOfSections = [self.collectionView.dataSource numberOfSectionsInCollectionView:self.collectionView];
+        NSIndexPath *lastHeaderIndexPath = [NSIndexPath indexPathForRow:0 inSection:numOfSections-1];
+        UICollectionViewLayoutAttributes *lastLayoutAttributes = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader atIndexPath:lastHeaderIndexPath];
+        CGSize contentSize = CGSizeMake(CGRectGetMaxX(lastLayoutAttributes.frame),CGRectGetMaxY(lastLayoutAttributes.frame) + 6*self.itemSize.height);
+        return contentSize;
+    }
+    else {
+        //compute the worst case
+        NSInteger numOfSections = [self.collectionView.dataSource numberOfSectionsInCollectionView:self.collectionView];
+        CGSize contentSize = CGSizeMake(7*self.headerReferenceSize.width*numOfSections, self.headerReferenceSize.height + 6*self.itemSize.height + 7*self.minimumLineSpacing);
+        //JMOLog(@"COntent size -> %@", NSStringFromCGSize(contentSize));
+        return contentSize;
+    }
 }
 
 #pragma mark - Cells Layout

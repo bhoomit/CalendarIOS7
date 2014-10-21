@@ -60,7 +60,7 @@
 - (CALAgendaCollectionView *)calendarCollectionView{
 	if(!_calendarCollectionView){
 		CGRect frame = self.calendarView.bounds;
-		frame.size.height += 35;
+		frame.size.height += 100;
 		_calendarCollectionView = [[CALAgendaCollectionView alloc] initWithFrame:frame collectionViewLayout:self.collectionMonthLayout];
 	}
 	return _calendarCollectionView;
@@ -97,7 +97,7 @@
 	// Do any additional setup after loading the view from its nib.
 	self.title = @"Agenda";
 	self.calendar = [NSDate gregorianCalendar];
-	self.calendarScrollDirection = UICollectionViewScrollDirectionHorizontal;
+	self.calendarScrollDirection = direction;
 	self.sectionFormater = [NSDateFormatter dateFormatterForType:CALDateFormatterType_dd_MM_yyyy];
 	
 	self.calendarCollectionView.delegate = self;
@@ -137,9 +137,12 @@
 		//Compute itemSize
 		self.collectionMonthLayout = [[CALAgendaMonthCollectionViewLayout alloc] initWithWidth:CGRectGetWidth(self.calendarCollectionView.bounds)];
 	}
-	self.collectionMonthLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+	self.collectionMonthLayout.scrollDirection = self.calendarScrollDirection;
 	[self.calendarCollectionView setCollectionViewLayout:self.collectionMonthLayout animated:YES];
 	[self.calendarCollectionView reloadData];
+	self.calendarCollectionView.bounces = NO;
+	self.calendarCollectionView.alwaysBounceHorizontal = YES;
+	self.calendarCollectionView.alwaysBounceVertical = NO;
 }
 
 - (void)reloadContent
@@ -205,7 +208,7 @@
 	if ([self.calendarCollectionView.collectionViewLayout isKindOfClass:[CALAgendaMonthCollectionViewLayout class]]) {
 		if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
 			CALMonthHeaderView *monthHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"CALMonthHeaderView" forIndexPath:indexPath];
-			monthHeader.masterLabel.text = [self monthAtIndexPath:indexPath];
+			monthHeader.masterLabel.text = [[self monthAtIndexPath:indexPath] uppercaseString];
 			[monthHeader updateWithDayNames:[NSDate weekdaySymbols] cellSize:self.collectionMonthLayout.itemSize];
 			monthHeader.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.95f];
 			return monthHeader;

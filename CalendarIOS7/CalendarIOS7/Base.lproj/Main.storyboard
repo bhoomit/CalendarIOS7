@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDD-YP-WB7">
-                                <rect key="frame" x="0.0" y="163" width="320" height="280"/>
+                                <rect key="frame" x="16" y="163" width="227" height="209"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
