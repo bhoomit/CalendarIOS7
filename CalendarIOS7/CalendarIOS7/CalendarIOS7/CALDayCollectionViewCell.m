@@ -113,7 +113,7 @@
 	[self removeTodayLayer];
 	[self setUserInteractionEnabled:YES];
 	self.dayLabel.textColor = [UIColor blackColor];
-		switch (type) {
+	switch (type) {
 		case CALDayCollectionViewCellDayTypeEmpty:
 			self.dayLabel.text = @"";
 			self.dayLabel.textColor = [UIColor lightGrayColor];
@@ -125,9 +125,9 @@
 		case CALDayCollectionViewCellDayTypeToday:
 			self.dayLabel.textColor = [UIColor whiteColor];
 			self.todayLayer = [[CALayer alloc] init];
-			[self.todayLayer setFrame:CGRectMake(2.0f, 2.0f, 26.0f, 26.0f)];
+			[self.todayLayer setFrame:CGRectMake(3.0f, 3.0f, 26.0f, 26.0f)];
 			[self.todayLayer setBackgroundColor:[UIColor colorWithRed:(25/255.0) green:(210/255.0) blue:(246/255.0) alpha:1].CGColor];
-//			[self.todayLayer setCornerRadius:16.0f];
+			//			[self.todayLayer setCornerRadius:16.0f];
 			[self.contentView.layer addSublayer:self.todayLayer];
 			[self.contentView setBackgroundColor:self.contentViewColor];
 			[self.separatorLayer setBackgroundColor:[UIColor lightGrayColor].CGColor];

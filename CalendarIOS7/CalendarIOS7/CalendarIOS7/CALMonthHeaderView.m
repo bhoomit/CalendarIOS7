@@ -26,123 +26,123 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        [self setup];
-    }
-    return self;
+	self = [super initWithFrame:frame];
+	if (self) {
+		// Initialization code
+		[self setup];
+	}
+	return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        // Initialization code
-        [self setup];
-    }
-    return self;
+	self = [super initWithCoder:aDecoder];
+	if (self) {
+		// Initialization code
+		[self setup];
+	}
+	return self;
 }
 
 - (void)setup
 {
-    self.weekLabels = [NSMutableArray arrayWithCapacity:7];
-    self.clipsToBounds = YES;
-    
-    UILabel *masterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 15.0f, CGRectGetWidth(self.frame), 30.f)];
-    [masterLabel setBackgroundColor:[UIColor clearColor]];
-    [masterLabel setTextAlignment:NSTextAlignmentCenter];
-    [masterLabel setFont:[UIFont fontWithName:@"Avenir Next Bold" size:16.0f]];
-    self.masterLabel = masterLabel;
-    [self addSubview:self.masterLabel];
-    
-    CGFloat yOffset = 44.0f;
-    CGFloat oneLabelWidth = CGRectGetWidth(self.frame) / 7;
-    CGFloat xOffset = 0.0f;
-
-    UILabel *dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
-    dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
-    [dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
-    [dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
-    self.day1OfTheWeekLabel = dayOfTheWeekLabel;
-    [self addSubview:self.day1OfTheWeekLabel];
-    [self.weekLabels addObject:self.day1OfTheWeekLabel];
-    
-    xOffset += oneLabelWidth + 5.0f;
-    dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
-    dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
-    [dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
-    [dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
-    self.day2OfTheWeekLabel = dayOfTheWeekLabel;
-    [self addSubview:self.day2OfTheWeekLabel];
-    [self.weekLabels addObject:self.day2OfTheWeekLabel];
-
-    xOffset += oneLabelWidth + 5.0f;
-    dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
-    dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
-    [dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
-    [dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
-    self.day3OfTheWeekLabel = dayOfTheWeekLabel;
-    [self addSubview:self.day3OfTheWeekLabel];
-    [self.weekLabels addObject:self.day3OfTheWeekLabel];
-
-    xOffset += oneLabelWidth + 5.0f;
-    dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
+	self.weekLabels = [NSMutableArray arrayWithCapacity:7];
+	self.clipsToBounds = YES;
+	
+	UILabel *masterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 5.0f, CGRectGetWidth(self.frame), 30.f)];
+	[masterLabel setBackgroundColor:[UIColor clearColor]];
+	[masterLabel setTextAlignment:NSTextAlignmentCenter];
+	[masterLabel setFont:[UIFont fontWithName:@"Avenir Next Bold" size:16.0f]];
+	self.masterLabel = masterLabel;
+	[self addSubview:self.masterLabel];
+	
+	CGFloat yOffset = 42.0f;
+	CGFloat oneLabelWidth = CGRectGetWidth(self.frame) / 7;
+	CGFloat xOffset = 0.0f;
+	
+	UILabel *dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
 	dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
-    [dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
-    [dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
-    self.day4OfTheWeekLabel = dayOfTheWeekLabel;
-    [self addSubview:self.day4OfTheWeekLabel];
-    [self.weekLabels addObject:self.day4OfTheWeekLabel];
-
-    xOffset += oneLabelWidth + 5.0f;
-    dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
+	[dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
+	[dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
+	self.day1OfTheWeekLabel = dayOfTheWeekLabel;
+	[self addSubview:self.day1OfTheWeekLabel];
+	[self.weekLabels addObject:self.day1OfTheWeekLabel];
+	
+	xOffset += oneLabelWidth + 5.0f;
+	dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
 	dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
-    [dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
-    [dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
-    self.day5OfTheWeekLabel = dayOfTheWeekLabel;
-    [self addSubview:self.day5OfTheWeekLabel];
-    [self.weekLabels addObject:self.day5OfTheWeekLabel];
-
-    xOffset += oneLabelWidth + 5.0f;
-    dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
-    dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
-    [dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
-    [dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
-    self.day6OfTheWeekLabel = dayOfTheWeekLabel;
-    [self addSubview:self.day6OfTheWeekLabel];
-    [self.weekLabels addObject:self.day6OfTheWeekLabel];
-
-    xOffset += oneLabelWidth + 5.0f;
-    dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
-    dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
-    [dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
-    [dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
-    self.day7OfTheWeekLabel = dayOfTheWeekLabel;
-    [self addSubview:self.day7OfTheWeekLabel];
-    [self.weekLabels addObject:self.day7OfTheWeekLabel];
+	[dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
+	[dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
+	self.day2OfTheWeekLabel = dayOfTheWeekLabel;
+	[self addSubview:self.day2OfTheWeekLabel];
+	[self.weekLabels addObject:self.day2OfTheWeekLabel];
+	
+	xOffset += oneLabelWidth + 5.0f;
+	dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
+	dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
+	[dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
+	[dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
+	self.day3OfTheWeekLabel = dayOfTheWeekLabel;
+	[self addSubview:self.day3OfTheWeekLabel];
+	[self.weekLabels addObject:self.day3OfTheWeekLabel];
+	
+	xOffset += oneLabelWidth + 5.0f;
+	dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
+	dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
+	[dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
+	[dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
+	self.day4OfTheWeekLabel = dayOfTheWeekLabel;
+	[self addSubview:self.day4OfTheWeekLabel];
+	[self.weekLabels addObject:self.day4OfTheWeekLabel];
+	
+	xOffset += oneLabelWidth + 5.0f;
+	dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
+	dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
+	[dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
+	[dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
+	self.day5OfTheWeekLabel = dayOfTheWeekLabel;
+	[self addSubview:self.day5OfTheWeekLabel];
+	[self.weekLabels addObject:self.day5OfTheWeekLabel];
+	
+	xOffset += oneLabelWidth + 5.0f;
+	dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
+	dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
+	[dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
+	[dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
+	self.day6OfTheWeekLabel = dayOfTheWeekLabel;
+	[self addSubview:self.day6OfTheWeekLabel];
+	[self.weekLabels addObject:self.day6OfTheWeekLabel];
+	
+	xOffset += oneLabelWidth + 5.0f;
+	dayOfTheWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(xOffset,yOffset, oneLabelWidth, CATDayLabelHeight)];
+	dayOfTheWeekLabel.textAlignment = NSTextAlignmentCenter;
+	[dayOfTheWeekLabel setBackgroundColor:[UIColor clearColor]];
+	[dayOfTheWeekLabel setFont:[UIFont fontWithName:@"Avenir Next" size:11.0f]];
+	self.day7OfTheWeekLabel = dayOfTheWeekLabel;
+	[self addSubview:self.day7OfTheWeekLabel];
+	[self.weekLabels addObject:self.day7OfTheWeekLabel];
 }
 
 - (void)updateWithDayNames:(NSArray *)dayNames cellSize:(CGSize)itemSize
 {
-    CGFloat widthForSpace = CGRectGetWidth(self.bounds) - 7 * itemSize.width;
-    CGFloat minimumLineSpacing = widthForSpace / 6.0f;
-    
-    CGFloat oneLabelWidth = itemSize.width ;
-    CGFloat xOffset = 0.0f;
-    
-    for (int i = 0; i < self.weekLabels.count; i++) {
-        UILabel *weekLabel = self.weekLabels[i];
-        weekLabel.text = dayNames[i];
-        
-        CGRect frame = weekLabel.frame;
-        frame.origin.y = CGRectGetMaxY(self.masterLabel.frame);
-        frame.origin.x = xOffset;
-        frame.size.width = oneLabelWidth;
-        weekLabel.frame = frame;
-        
-        xOffset = xOffset + oneLabelWidth + minimumLineSpacing;
-    }
+	CGFloat widthForSpace = CGRectGetWidth(self.bounds) - 7 * itemSize.width;
+	CGFloat minimumLineSpacing = widthForSpace / 6.0f;
+	
+	CGFloat oneLabelWidth = itemSize.width ;
+	CGFloat xOffset = 0.0f;
+	
+	for (int i = 0; i < self.weekLabels.count; i++) {
+		UILabel *weekLabel = self.weekLabels[i];
+		weekLabel.text = dayNames[i];
+		
+		CGRect frame = weekLabel.frame;
+		frame.origin.y = CGRectGetMaxY(self.masterLabel.frame);
+		frame.origin.x = xOffset;
+		frame.size.width = oneLabelWidth;
+		weekLabel.frame = frame;
+		
+		xOffset = xOffset + oneLabelWidth + minimumLineSpacing;
+	}
 }
 
 @end
