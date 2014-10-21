@@ -24,7 +24,6 @@
 		C296448F18CC4F7B00D45987 /* CALAgendaMonthCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C296448418CC4F7B00D45987 /* CALAgendaMonthCollectionViewLayout.m */; };
 		C296449018CC4F7B00D45987 /* CALDayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C296448618CC4F7B00D45987 /* CALDayCollectionViewCell.m */; };
 		C296449118CC4F7B00D45987 /* CALMonthHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C296448818CC4F7B00D45987 /* CALMonthHeaderView.m */; };
-		C296449318CC4F7B00D45987 /* CALAgendaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C296448B18CC4F7B00D45987 /* CALAgendaViewController.m */; };
 		C296449518CC4F7B00D45987 /* NSDate+Agenda.m in Sources */ = {isa = PBXBuildFile; fileRef = C296448E18CC4F7B00D45987 /* NSDate+Agenda.m */; };
 		C296449818CC50C200D45987 /* CALAgendaCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C296449718CC50C200D45987 /* CALAgendaCollectionView.m */; };
 		C296449C18CC54EC00D45987 /* NSDate+ETI.m in Sources */ = {isa = PBXBuildFile; fileRef = C296449B18CC54EC00D45987 /* NSDate+ETI.m */; };
@@ -77,8 +76,6 @@
 		C296448618CC4F7B00D45987 /* CALDayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALDayCollectionViewCell.m; sourceTree = "<group>"; };
 		C296448718CC4F7B00D45987 /* CALMonthHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALMonthHeaderView.h; sourceTree = "<group>"; };
 		C296448818CC4F7B00D45987 /* CALMonthHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALMonthHeaderView.m; sourceTree = "<group>"; };
-		C296448A18CC4F7B00D45987 /* CALAgendaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALAgendaViewController.h; sourceTree = "<group>"; };
-		C296448B18CC4F7B00D45987 /* CALAgendaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALAgendaViewController.m; sourceTree = "<group>"; };
 		C296448D18CC4F7B00D45987 /* NSDate+Agenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Agenda.h"; sourceTree = "<group>"; };
 		C296448E18CC4F7B00D45987 /* NSDate+Agenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Agenda.m"; sourceTree = "<group>"; };
 		C296449618CC50C200D45987 /* CALAgendaCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALAgendaCollectionView.h; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		C29D1AD418DC15760011C2E7 /* CALDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALDay.m; sourceTree = "<group>"; };
 		C29D1AD618DC159A0011C2E7 /* CALQuartHour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALQuartHour.h; sourceTree = "<group>"; };
 		C29D1AD718DC159A0011C2E7 /* CALQuartHour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALQuartHour.m; sourceTree = "<group>"; };
-		C29D1ADC18DDE2170011C2E7 /* JMOLogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMOLogMacro.h; sourceTree = "<group>"; };
 		C29D1ADD18DE1C7C0011C2E7 /* CALCollectionViewFlowLayoutWithStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALCollectionViewFlowLayoutWithStickyHeader.h; sourceTree = "<group>"; };
 		C29D1ADE18DE1C7C0011C2E7 /* CALCollectionViewFlowLayoutWithStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALCollectionViewFlowLayoutWithStickyHeader.m; sourceTree = "<group>"; };
 		C2C6CAA01956111C00385FF5 /* CALAgendaLinearMonthCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALAgendaLinearMonthCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -212,12 +208,9 @@
 		C296448118CC4F7B00D45987 /* CalendarIOS7 */ = {
 			isa = PBXGroup;
 			children = (
-				C29D1ADC18DDE2170011C2E7 /* JMOLogMacro.h */,
 				C29D1AD218DB8F8F0011C2E7 /* CALAgenda.h */,
 				C296448218CC4F7B00D45987 /* CALAgendaEvent.h */,
 				C29D1AD118DB8C8F0011C2E7 /* CALAgendaCollectionViewDelegate.h */,
-				C296448A18CC4F7B00D45987 /* CALAgendaViewController.h */,
-				C296448B18CC4F7B00D45987 /* CALAgendaViewController.m */,
 				C2C6CA9D1956106500385FF5 /* CollectionViewLayouts */,
 				C2C6CA9E1956107E00385FF5 /* CollectionView */,
 				C2C6CA9F1956109D00385FF5 /* Model */,
@@ -408,7 +401,6 @@
 				C2C6CAA21956111C00385FF5 /* CALAgendaLinearMonthCollectionViewLayout.m in Sources */,
 				C29D1AD518DC15760011C2E7 /* CALDay.m in Sources */,
 				C296445D18CC4EDF00D45987 /* CALAppDelegate.m in Sources */,
-				C296449318CC4F7B00D45987 /* CALAgendaViewController.m in Sources */,
 				C296446318CC4EDF00D45987 /* CALViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

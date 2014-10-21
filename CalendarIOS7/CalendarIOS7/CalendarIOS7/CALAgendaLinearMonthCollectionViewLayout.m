@@ -7,7 +7,6 @@
 //
 
 #import "CALAgendaLinearMonthCollectionViewLayout.h"
-#import "JMOLogMacro.h"
 
 static NSString * const CALAgendaMonthCollectionViewLayoutCell = @"CALAgendaMonthCollectionViewLayoutCell";
 
@@ -61,7 +60,6 @@ static NSString * const CALAgendaMonthCollectionViewLayoutCell = @"CALAgendaMont
             [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
             itemAttributes.frame = [self frameForItemAtIndexPath:indexPath previousRect:previousRect previousIndexPath:previousIndexPath];
             previousRect = itemAttributes.frame;
-            JMOLog(@"indexPath(%@) -> %@",indexPath, NSStringFromCGRect(previousRect));
             cellLayoutInfo[indexPath] = itemAttributes;
             previousIndexPath = indexPath;
         }
@@ -98,12 +96,12 @@ static NSString * const CALAgendaMonthCollectionViewLayoutCell = @"CALAgendaMont
         //compute the worst case
         NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:[self.collectionView numberOfItemsInSection:[self.collectionView numberOfSections]-1]-1 inSection:[self.collectionView numberOfSections]-1];
         UICollectionViewLayoutAttributes *itemAttributes = self.layoutInfo[CALAgendaMonthCollectionViewLayoutCell][lastIndexPath];
-        JMOLog(@"COntent size -> %@", NSStringFromCGSize(CGSizeMake(320.0f, itemAttributes.frame.origin.y + itemAttributes.frame.size.height)));
+		NSLog(@"COntent size -> %@", NSStringFromCGSize(CGSizeMake(320.0f, itemAttributes.frame.origin.y + itemAttributes.frame.size.height)));
         return CGSizeMake(320.0f, itemAttributes.frame.origin.y + itemAttributes.frame.size.height);
     }
     else {
         //compute the worst case
-        JMOLog(@"TODO try to implement this layout horizontaly");
+        NSLog(@"TODO try to implement this layout horizontaly");
         return CGSizeZero;
     }
 }
@@ -133,7 +131,7 @@ static NSString * const CALAgendaMonthCollectionViewLayoutCell = @"CALAgendaMont
         }
     }
     else {
-        JMOLog(@"TODO try to implement this layout horizontaly");
+        NSLog(@"TODO try to implement this layout horizontaly");
         return CGRectZero;
     }
     
