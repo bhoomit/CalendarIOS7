@@ -55,7 +55,18 @@
 
     [self registerClass:[CALDayHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CALDayHeaderView"];
     [self registerClass:[CALMonthHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CALMonthHeaderView"];
-    
+	
+	UIButton *next = [[UIButton alloc] initWithFrame:CGRectMake(self.bounds.origin.x + self.bounds.size.width - 30, self.bounds.origin.y + 10, 20, 20)];
+	[next setTitle:@"❯" forState:UIControlStateNormal];
+	[next setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+	[next addTarget:self
+			   action:@selector(aMethod:)forControlEvents:UIControlEventTouchDown];
+	[self addSubview:next];
+	
+	UIButton *prev = [[UIButton alloc] initWithFrame:CGRectMake(self.bounds.origin.x + 10, self.bounds.origin.y + 10, 20, 20)];
+	[prev setTitle:@"❮" forState:UIControlStateNormal];
+	[prev setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+	[self addSubview:prev];
     [self updatePagination];
 }
 

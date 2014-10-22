@@ -41,7 +41,7 @@
 		
 		_dayLabel = [[UILabel alloc] initWithFrame:self.contentView.bounds];
 		_dayLabel.textAlignment = NSTextAlignmentCenter;
-		[_dayLabel setFont:[UIFont fontWithName:@"Avenir Next Demi Bold" size:13.0f]];
+		[_dayLabel setFont:[UIFont fontWithName:@"Avenir Next Demi Bold" size:15.0f]];
 		
 		_dayLabel.backgroundColor = [UIColor clearColor];
 		[self addSubview:_dayLabel];
