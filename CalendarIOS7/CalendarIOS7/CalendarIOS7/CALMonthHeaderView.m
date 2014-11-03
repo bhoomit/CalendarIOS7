@@ -49,7 +49,7 @@
 	self.weekLabels = [NSMutableArray arrayWithCapacity:7];
 	self.clipsToBounds = YES;
 	
-	UILabel *masterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 5.0f, CGRectGetWidth(self.frame), 30.f)];
+	UILabel *masterLabel = [[UILabel alloc] initWithFrame:CGRectMake(30.0f, 5.0f, CGRectGetWidth(self.frame)-60, 30.f)];
 	[masterLabel setBackgroundColor:[UIColor clearColor]];
 	[masterLabel setTextAlignment:NSTextAlignmentCenter];
 	[masterLabel setFont:[UIFont fontWithName:@"Avenir Next Bold" size:16.0f]];
