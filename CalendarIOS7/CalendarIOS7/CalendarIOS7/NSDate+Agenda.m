@@ -26,7 +26,7 @@ const char * const JmoLocaleStoreKey = "jmo.locale";
     NSCalendar* cal = objc_getAssociatedObject(self, JmoCalendarStoreKey);
     if (nil == cal) {
         cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-        [cal setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+        [cal setTimeZone:[NSTimeZone defaultTimeZone]];
         [cal setLocale:[self locale]];
         [self setGregorianCalendar:cal];
         
